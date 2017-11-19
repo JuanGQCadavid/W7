@@ -1,0 +1,54 @@
+
+import java_cup.runtime.*;
+
+
+/* Terminales a ser escaneados  */
+
+
+
+terminal      DESPLIZQ,DESPLDER,SUMA,RESTA,MULTI,DIV,IGUAL;
+terminal      IPARENTESIS,DPARENTESIS;
+terminal      S,P,M;
+terminal      IDENTIFIER,IDENTIFIERFUNC,R,C;
+terminal      EOL;
+terminal Integer	NUMBER;
+
+
+/* No terminales */
+
+non terminal     prog,stms,line,bitwiseexpr,expr,term,storable,factor; 
+
+
+prog ::= stms
+;
+stms ::= stms line
+     | line
+     ;
+line ::= bitwiseexpr EOL
+     | IDENTIFIER IGUAL bitwiseexpr EOL
+     | EOL
+     ;
+bitwiseexpr::= bitwiseexpr DESPLIZQ expr
+		| bitwiseexpr DESPLDER expr
+		| expr
+		;
+expr ::= expr SUMA term
+     | expr RESTA term
+     | term
+     ;
+term ::= term MULTI storable
+     | term DIV storable
+     | storable
+     ;
+storable ::= factor S
+	 | factor P
+	 | factor M
+	 | factor
+	 ;
+factor ::= NUMBER
+       | IDENTIFIER
+       | IDENTIFIERFUNC IPARENTESIS bitwiseexpr DPARENTESIS
+       | R
+       | C
+       | IPARENTESIS bitwiseexpr DPARENTESIS
+       ;
