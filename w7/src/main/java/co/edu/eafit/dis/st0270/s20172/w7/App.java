@@ -1,4 +1,7 @@
-package co.edu.eafit.dis.st0270.s20172w7.javacalc;
+package co.edu.eafit.dis.st0270.s20172.w7;
+
+import co.edu.eafit.dis.st0270.javacalc.abstree.*;
+
 
 import java_cup.runtime.*;
 import java.io.FileReader;
