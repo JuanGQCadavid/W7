@@ -6,8 +6,8 @@ package co.edu.eafit.dis.st0270.s20172.w7;
 import java_cup.runtime.*;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
-//import co.edu.eafit.dis.st0270.s20172.w7.parser.*;
-//import co.edu.eafit.dis.st0270.s20172.w7.lexer.*;
+import co.edu.eafit.dis.st0270.s20172.w7.parser.*;
+import co.edu.eafit.dis.st0270.s20172.w7.lexer.*;
 
 public class App{
 	
