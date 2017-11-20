@@ -11,7 +11,7 @@ import co.edu.eafit.dis.st0270.s20172.w7.parser.W7Sym;
  * <a href="http://www.jflex.de/">JFlex</a> 1.6.1
  * from the specification file <tt>/home/Jquiro12/Documents/Compilator_Project/W7/w7/src/main/jflex/lexer.jflex</tt>
  */
-public class W7Lexer implements java_cup.runtime.Scanner {
+class W7Lexer implements java_cup.runtime.Scanner {
 
   /** This character denotes the end of file */
   public static final int YYEOF = -1;
@@ -383,7 +383,7 @@ public class W7Lexer implements java_cup.runtime.Scanner {
    *
    * @param   in  the java.io.Reader to read input from.
    */
-  public W7Lexer(java.io.Reader in) {
+  W7Lexer(java.io.Reader in) {
     this.zzReader = in;
   }
 

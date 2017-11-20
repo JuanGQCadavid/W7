@@ -6,6 +6,7 @@ import co.edu.eafit.dis.st0270.s20172.w7.parser.W7Sym;
 %%
 %class W7Lexer
 %cup
+%public
 
 whiteSpace = [ \t]
 EOL = \n|\r\n|\r
